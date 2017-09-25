@@ -24,7 +24,7 @@ function calculate() {
     // Body Surface Area (BSA)
     // -------------------------------
 
-    var BSA = 0;
+    var BSA = Math.sqrt(((height*2.54)*(weight*0.454))/3600);
 
     // ==========================================
     // Todo: Perform BSA calculation here
@@ -33,15 +33,17 @@ function calculate() {
     // Ideal Body Weight (IBW)
     // -------------------------------
 
-    var IBW = 0;
+    var IBW = 2.3*((height*2.54)-60);
 
     if ( female ) {
+        5.5 + IBW
 
         // ==========================================
         // Todo: Perform female IBW calculation here
 
 
     } else if ( male ) {
+        50 + IBW
 
         // ==========================================
         // Todo: Perform male IBW calculation here
@@ -52,20 +54,20 @@ function calculate() {
     // Body Mass Index (BMI)
     // -------------------------------
 
-    var BMI = 0;
+    var BMI = weight/Math.pow((height*0.0254), 2);
 
     // ==========================================
     // Todo: Perform BMI calculation here
 
 
 
-    // Do not modify this function call
+    // Do not modify this function call                                             STOP
     display( BSA, IBW, BMI );
 
 }
 
 // ------------------------------------
-// Do not modify this function
+// Do not modify this function                                                      STOP
 function display( BSA, IBW, BMI ) {
 
     var message = 'Body Surface Area = ' + BSA.toPrecision(4) + ' m^2\nIdeal Body Weight = ' + IBW.toPrecision(4) + ' kg\nBody Mass Index = ' + BMI.toPrecision(4) + ' kg/m^2';
